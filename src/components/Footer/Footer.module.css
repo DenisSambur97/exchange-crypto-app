@@ -1,0 +1,38 @@
+.header {
+    font-family: Manrope, serif;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 100px;
+    border-bottom: 1px solid #CDD2DD;
+}
+
+.header__btn {
+    width: 200px;
+    height: 48px;
+    position: absolute;
+    right: 80px;
+    /*top: 40px;*/
+    padding: 12px 32px;
+    border-radius: 8px;
+    opacity: 1;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    background: #08D899;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.header__btn:focus {
+    outline: none;
+}
+
+.header__btn:hover {
+    background-color: #0deaa6;
+    transition: background-color 0.5s ease;
+}
