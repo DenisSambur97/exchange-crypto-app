@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { placeOrder } from './Blockchain'; // Импортируем функцию placeOrder
+import React, {useState} from 'react';
+import {placeOrder} from './Blockchain';
 
 function OrderForm() {
     const [orderType, setOrderType] = useState('buy');
     const [tokenAmount, setTokenAmount] = useState('');
     const [tokenPrice, setTokenPrice] = useState('');
-    const [errorMessage, setErrorMessage] = useState(''); // Состояние для хранения сообщения об ошибке
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleOrderTypeChange = (event) => {
         setOrderType(event.target.value);
@@ -38,7 +38,7 @@ function OrderForm() {
     return (
         <div>
             <h2>Place Order</h2>
-            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>} {/* Отображение сообщения об ошибке */}
+            {errorMessage && <p style={{color: 'red'}}>{errorMessage}</p>} {/* Отображение сообщения об ошибке */}
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>
@@ -52,13 +52,13 @@ function OrderForm() {
                 <div>
                     <label>
                         Token Amount:
-                        <input type="number" value={tokenAmount} onChange={handleTokenAmountChange} />
+                        <input type="number" value={tokenAmount} onChange={handleTokenAmountChange}/>
                     </label>
                 </div>
                 <div>
                     <label>
                         Token Price:
-                        <input type="number" value={tokenPrice} onChange={handleTokenPriceChange} />
+                        <input type="number" value={tokenPrice} onChange={handleTokenPriceChange}/>
                     </label>
                 </div>
                 <button type="submit">Submit Order</button>

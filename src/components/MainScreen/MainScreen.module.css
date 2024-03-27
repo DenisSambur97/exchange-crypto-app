@@ -1,4 +1,4 @@
-.animated-background {
+.animatedBackground {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     filter: blur(90px);
 }
 
-.ellipse-170 {
+.ellipse170 {
     background: #B2F1DE;
     transform: rotate(-131.25deg);
     animation: move-ellipse-170 10s infinite linear alternate;
@@ -24,7 +24,7 @@
     left: 0;
 }
 
-.ellipse-171 {
+.ellipse171 {
     background: #3AC922;
     transform: matrix(-0.42, -0.91, -0.91, 0.42, 0, 0);
     animation: move-ellipse-171 10s infinite linear alternate;
@@ -32,7 +32,7 @@
     right: 0;
 }
 
-.ellipse-169 {
+.ellipse169 {
     background: #3AC922;
     transform: rotate(-65.41deg);
     animation: move-ellipse-169 10s infinite linear alternate;
@@ -40,7 +40,7 @@
     left: 0;
 }
 
-.ellipse-168 {
+.ellipse168 {
     background: #B2F1DE;
     transform: rotate(-65.41deg);
     animation: move-ellipse-168 10s infinite linear alternate;

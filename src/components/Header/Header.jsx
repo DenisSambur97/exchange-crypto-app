@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import Web3 from 'web3';
-import { shortenAddress } from '../helpers/shortenAddress';
-import { ReactComponent as Logo } from '../assets/logo.svg';
+import {shortenAddress} from '../../helpers/shortenAddress';
+import {ReactComponent as Logo} from '../../assets/logo.svg';
+import {ReactComponent as Fox} from '../../assets/fox.svg';
+import {ReactComponent as Pin} from '../../assets/pin.svg';
+import style from './Header.module.css'
 
 function Header() {
     const [walletAddress, setWalletAddress] = useState(null);
@@ -58,7 +61,7 @@ function Header() {
     const connectWallet = async () => {
         if (window.ethereum) {
             try {
-                await window.ethereum.request({ method: 'eth_requestAccounts' });
+                await window.ethereum.request({method: 'eth_requestAccounts'});
             } catch (error) {
                 console.error('Failed to connect wallet:', error);
             }
@@ -69,10 +72,19 @@ function Header() {
     };
 
     return (
-        <header>
-            <Logo />
+        <header className={style.header}>
+            <Logo/>
             {/* Проверяем, подключен ли кошелек, и отображаем соответствующую информацию */}
-            <button onClick={connectWallet}>{walletAddress ? shortenAddress(walletAddress) : 'Connect Wallet'}</button>
+            {walletAddress
+                ?
+                <button disabled className={style.header__btn_active}>
+                    <Fox/>
+                    <span>{shortenAddress(walletAddress)}</span>
+                    <Pin/>
+                </button>
+                :
+                <button onClick={connectWallet} className={style.header__btn}>Connect Wallet</button>
+            }
         </header>
     );
 }

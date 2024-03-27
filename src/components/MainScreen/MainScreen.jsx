@@ -1,22 +1,18 @@
-// MainScreen.jsx
 import React from 'react';
-import OrderForm from './OrderForm';
-
-import './MainScreen.css'; // Подключаем стили для анимированного фона
+import style from './MainScreen.module.css';
 
 function MainScreen() {
     return (
-        <div className="main-screen">
-            <div className="animated-background">
-                <div className="ellipse ellipse-170"/>
-                <div className="ellipse ellipse-171"/>
-                <div className="ellipse ellipse-169"/>
-                <div className="ellipse ellipse-168"/>
-            </div> {/* Это для анимированного фона */}
-            <OrderForm />
-            {/*<OrderList orders={orders} />*/}
-            {/*<PriceList prices={prices} />*/}
-        </div>
+        <div className={style.animatedBackground}>
+            <div className={`${style.ellipse} ${style.ellipse170}`} />
+            <div className={`${style.ellipse} ${style.ellipse171}`} />
+            <div className={`${style.ellipse} ${style.ellipse169}`} />
+            <div className={`${style.ellipse} ${style.ellipse168}`} />
+        </div> /* Это для анимированного фона */
+        /*Чтобы проверить функционал*/
+        /*<OrderForm />*/
+        /*<OrderList orders={orders} />*/
+        /*<PriceList prices={prices} />*/
     );
 }
 
